@@ -1,0 +1,333 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body, html {
+	height: 100%;
+}
+
+body {
+	background-color: #ffcccc;
+}
+
+header {
+	background: url("images/workout_wallpaper.jpg");
+	background-size: cover;
+	height: 33%;
+	width: 100%;
+	display: table; /* This & last 3 lines of h1 needed to vertically center
+					   when container has % height and body has 100% height
+					   set -- duh, how obvious right?!
+					*/
+}
+
+h1 {
+	font-family: "Atomic Age", "Arial", sans-serif;
+	font-size: 100px;
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	letter-spacing: 13px;
+	color: #ff1a8c;
+}
+
+ul {
+	margin-top: 15px;
+}
+
+li {
+	display: inline-block;
+	width: 31%;
+	padding: 10px 16px 10px 10px;
+	overflow: hidden;
+	font-family: "Kite One", "Arial", sans-serif;
+}
+
+.products {
+	width: 1325px;
+}
+
+#last { 
+	display: table;
+	margin: 0 auto;
+} /* This is how you horizontally center the last item in a list */
+
+img {
+	-webkit-transition: all .35s ease-in-out;
+	-moz-transition: all .35s ease-in-out;
+	transition: all .35s ease-in-out;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.image_container img:hover {
+	-webkit-transform: scale(1.4, 1.4);
+	-moz-transform: scale(1.4, 1.4);
+	-o-transform: scale(1.4, 1.4);
+	-ms-transform: scale(1.4, 1.4);
+	transform: scale(1.4, 1.4);
+}
+
+.image_container:hover .add_to_cart {
+	bottom: 0;
+}
+
+.image_container {
+	overflow: hidden;
+	position: relative;
+	height: 300px;
+}
+
+.add_to_cart {
+	position: absolute;
+	bottom: -50%;
+	-webkit-transition: all .35s ease;
+	-moz-transition: all .35s ease;
+	transition: all .35s ease;
+	color: white;
+	margin: 0 auto;
+	padding: 5px 10px;
+	text-align: center;
+	width: 100%;
+}
+
+.buy {
+	width: 50px;
+	height: 50px;
+	color: white;
+	border: none;
+	border-radius: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.buy:hover {
+	background: rgba(255, 255, 255, 1);
+	color: red;
+}
+
+.add_to_cart input {
+	width: 15%;
+}
+
+.add_to_cart label {
+	margin-right: 10px;
+}
+
+p span {
+	font-size: 22px;
+	color: #ff3333;
+}
+
+li h2, li h3 {
+	text-align: center;
+}
+
+li h2 {
+	font-size: 30px;
+	font-family: "Atomic Age", Arial, sans-serif;
+	letter-spacing: 1px;
+}
+
+.shopping-cart {
+	-webkit-box-shadow: 10px 10px 45px 1px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 10px 10px 45px 1px rgba(0, 0, 0, 0.75);
+	box-shadow: 10px 10px 45px 1px rgba(0, 0, 0, 0.75);
+	background: #ecf0f1;
+	width: 1100px;
+	margin: auto;
+	border-radius: 1em;
+	margin-top: 80px;
+	min-width: 700px;
+	margin-bottom: 80px;
+	padding-bottom: 40px;
+}
+
+.shopping-cart h1 {
+	display: block;
+	margin: 0 auto;
+}
+
+.cart-header {
+	background: #f34d35;
+	text-transform: uppercase;
+	color: white;
+	font-family: "Ek Mukta", "Arial", sans-serif;
+	font-size: 24px;
+}
+
+.cart-header > div {
+	display: inline-block;
+}
+
+.col {
+	width: 22%;
+	padding: 10px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.cart-item p {
+	font-family: "Atomic Age", "Arial", sans-serif;
+	font-weight: 600;
+	width: 70%;
+}
+
+.cart-item img {
+	width: 70%;
+}
+
+.title {
+	text-align: center;
+}
+
+.price_column p, .total_column p {
+	font-size: 35px;
+}
+
+.quantity_column input {
+	border: 5px solid #f34d35;
+	padding: 5px;
+	width: 15%;
+	text-align: center;
+	font-size: 30px;
+	font-family: "Atomic Age", "Arial", sans-serif;
+}
+
+.quantity_column input:focus {
+	border: 5px solid black;
+	outline: none;
+}
+
+.subtract, .add {
+	border: none;
+	width: 30px;
+	height: 30px;
+	border-radius: 20px;
+	background: #f34d35;
+	color: white;
+	font-size: 20px;
+	vertical-align: middle;
+	position: relative;
+	bottom: 5px;
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.subtract:hover, .add:hover {
+	background: #a91f0a;
+}
+
+button span {
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	height: 25px;
+}
+
+.subtract:focus, .add:focus {
+	outline: none;
+}
+
+.remove, button#promo {
+	display: block;
+	margin-left: 13%;
+	margin-top: 15px;
+	border: none;
+	height: 40px;
+	width: 100px;
+	font-family: "Ek Mukta", "Arial", sans-serif;
+	font-size: 20px;
+	text-transform: uppercase;
+	padding: 5px 10px;
+	color: white;
+	background: #668cff;
+	cursor: pointer;
+	box-shadow: 10px 10px 41px -4px rgba(0, 0, 0, 0.75);
+}
+
+button#promo {
+	display: inline-block;
+	margin-left: 3%;
+}
+
+.remove:active, button#promo:active {
+	box-shadow: none;
+	position: relative;
+	bottom: -4px;
+}
+
+.cart-footer {
+}
+
+#promo {
+	margin-top: 15px;
+	display: inline-block;
+}
+
+#promo label {
+	margin-left: 5px;
+	font-family: "Ek Mukta", "Arial", sans-serif;
+	font-size: 24px;
+	text-transform: uppercase;
+	margin-right: 10px;
+}
+
+#promo input {
+	font-family: "Ek Mukta", "Arial", sans-serif;
+	font-size: 22px;
+	width: 22%;
+}
+
+#total {
+	display: inline-block;
+	font-size: 35px;
+	font-weight: 600;
+	font-family: "Atomic Age", "Arial", sans-serif;
+	margin-left: 21%;
+}
+
+@media screen and (min--moz-device-pixel-ratio:0) {
+	#total {
+		margin-left: 14%;
+	}
+}
+
+#final_buttons {
+	text-align: center;
+	margin-top: 60px;
+}
+
+#final_buttons button {
+	border: none;
+	height: 60px;
+	width: 230px;
+	font-family: "Ek Mukta", "Arial", sans-serif;
+	font-size: 25px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	padding: 5px 10px;
+	color: white;
+	background: #668cff;
+	cursor: pointer;
+	box-shadow: 10px 10px 41px -4px rgba(0, 0, 0, 0.75);
+}
+
+#final_buttons button:active {
+	box-shadow: none;
+	position: relative;
+	bottom: -4px;
+}
+
+#final_buttons button:hover {
+	background-color: #3366ff;
+}
+
+#final_buttons button:first-of-type {
+	margin-right: 20px;
+}
