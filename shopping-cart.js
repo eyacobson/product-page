@@ -245,16 +245,6 @@ function multiplyPrice(price, factor) {
 	return "$" + newPrice;
 }
 
-/*function getBaselineTotal() {
-	var cartItems = collectCartItems();
-	var baselineTotal = 0;
-	for (var i = 0; i < cartItems.length; i++) {
-		baselineTotal += cartItems[i].subtotal;
-	}
-	
-	return baselineTotal;
-}*/
-
 function getTotal() {
 	return parsePrice((document.getElementById("tothead").childNodes[0].nodeValue).slice(7));
 }
