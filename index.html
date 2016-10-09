@@ -32,8 +32,8 @@
 
 							<div class="add_to_cart">
 								<label for="amount">Quantity</label>
-								<input type="number" name="amount" value="1">
-								<button class="buy">
+								<input type="number" name="amount" value="1" min="1">
+								<button id="0" class="buy">
 									<div class="fa fa-shopping-cart"></div>
 								</button>
 							</div>
@@ -56,8 +56,8 @@
 
 							<div class="add_to_cart">
 								<label for="amount">Quantity</label>
-								<input type="number" name="amount" value="1">
-								<button class="buy">
+								<input type="number" name="amount" value="1" min="1">
+								<button id="1" class="buy">
 									<div class="fa fa-shopping-cart"></div>
 								</button>
 							</div>
@@ -80,8 +80,8 @@
 
 							<div class="add_to_cart">
 								<label for="amount">Quantity</label>
-								<input type="number" name="amount" value="1">
-								<button class="buy">
+								<input type="number" name="amount" value="1" min="1">
+								<button id="2" class="buy">
 									<div class="fa fa-shopping-cart"></div>
 								</button>
 							</div>
@@ -104,8 +104,8 @@
 
 							<div class="add_to_cart">
 								<label for="amount">Quantity</label>
-								<input type="number" name="amount" value="1">
-								<button class="buy">
+								<input type="number" name="amount" value="1" min="1">
+								<button id="3" class="buy">
 									<div class="fa fa-shopping-cart"></div>
 								</button>
 							</div>
@@ -128,8 +128,8 @@
 
 							<div class="add_to_cart">
 								<label for="amount">Quantity</label>
-								<input type="number" name="amount" value="1">
-								<button class="buy">
+								<input type="number" name="amount" value="1" min="1">
+								<button id="4" class="buy">
 									<div class="fa fa-shopping-cart"></div>
 								</button>
 							</div>
@@ -152,8 +152,8 @@
 
 							<div class="add_to_cart">
 								<label for="amount">Quantity</label>
-								<input type="number" name="amount" value="1">
-								<button class="buy">
+								<input type="number" name="amount" value="1" min="1">
+								<button id="5" class="buy">
 									<div class="fa fa-shopping-cart"></div>
 								</button>
 							</div>
@@ -176,8 +176,8 @@
 
 							<div class="add_to_cart">
 								<label for="amount">Quantity</label>
-								<input type="number" name="amount" value="1">
-								<button class="buy">
+								<input type="number" name="amount" value="1" min="1">
+								<button id="6" class="buy">
 									<div class="fa fa-shopping-cart"></div>
 								</button>
 							</div>
@@ -200,8 +200,8 @@
 
 							<div class="add_to_cart">
 								<label for="amount">Quantity</label>
-								<input type="number" name="amount" value="1">
-								<button class="buy">
+								<input type="number" name="amount" value="1" min="1">
+								<button id="7" class="buy">
 									<div class="fa fa-shopping-cart"></div>
 								</button>
 							</div>
@@ -224,8 +224,8 @@
 
 							<div class="add_to_cart">
 								<label for="amount">Quantity</label>
-								<input type="number" name="amount" value="1">
-								<button class="buy">
+								<input type="number" name="amount" value="1" min="1">
+								<button id="8" class="buy">
 									<div class="fa fa-shopping-cart"></div>
 								</button>
 							</div>
@@ -248,8 +248,8 @@
 
 							<div class="add_to_cart">
 								<label for="amount">Quantity</label>
-								<input type="number" name="amount" value="1">
-								<button class="buy">
+								<input type="number" name="amount" value="1" min="1">
+								<button id="9" class="buy">
 									<div class="fa fa-shopping-cart"></div>
 								</button>
 							</div>
@@ -268,7 +268,11 @@
 				</ul>
 			</div>
 
-			<div class="shopping-cart">
+			<div id="toggle" class="cart_buttons">
+				<button>Toggle Cart</button>
+			</div>
+
+			<div id="shopping-cart">
 				<h1>Shopping Cart</h1>
 
 				<div class="cart-header">
@@ -278,77 +282,84 @@
 					<div class="col total_column">Total</div>
 				</div>
 
-				<div class="cart-item">
-					<div class="col product_column">
-						<img src="images/workout-video.jpg" alt="" title="Sit Up Till Ya Spit Up">
-						<p class="title">Sit Up Till Ya Spit Up</p>
+				<div id="items">
+					<!-- Hard-coded shopping cart items -->
+					<!--<div class="cart-item">
+						<div class="col product_column">
+							<img src="images/workout-video.jpg" alt="" title="Sit Up Till Ya Spit Up">
+							<p class="title">Sit Up Till Ya Spit Up</p>
+						</div>
+
+						<div class="col price_column"><p>$19.99</p></div>
+
+						<div class="col quantity_column">
+							<button class="subtract"><span>-</span></button>
+							<input type="text" value="2">
+							<button class="add"><span>+</span></button>
+							<button class="remove">Remove</button>
+						</div>
+
+						<div class="col total_column"><p>$19.99</p></div>
 					</div>
 
-					<div class="col price_column"><p>$19.99</p></div>
+					<div class="cart-item">
+						<div class="col product_column">
+							<img src="images/workout-video.jpg" alt="" title="Curl Till Ya Hurl">
+							<p class="title">Curl Till Ya Hurl</p>
+						</div>
 
-					<div class="col quantity_column">
-						<button class="subtract"><span>-</span></button>
-						<input type="text">
-						<button class="add"><span>+</span></button>
-						<button class="remove">Remove</button>
+						<div class="col price_column"><p>$19.99</p></div>
+
+						<div class="col quantity_column">
+							<button class="subtract"><span>-</span></button>
+							<input type="text">
+							<button class="add"><span>+</span></button>
+							<button class="remove">Remove</button>
+						</div>
+
+						<div class="col total_column"><p>$19.99</p></div>
 					</div>
 
-					<div class="col total_column"><p>$19.99</p></div>
-				</div>
+					<div class="cart-item">
+						<div class="col product_column">
+							<img src="images/workout-video.jpg" alt="" title="Do Squats Till Ya Plotz">
+							<p class="title">Do Squats Till Ya Plotz</p>
+						</div>
 
-				<div class="cart-item">
-					<div class="col product_column">
-						<img src="images/workout-video.jpg" alt="" title="Curl Till Ya Hurl">
-						<p class="title">Curl Till Ya Hurl</p>
-					</div>
+						<div class="col price_column"><p>$19.99</p></div>
 
-					<div class="col price_column"><p>$19.99</p></div>
+						<div class="col quantity_column">
+							<button class="subtract"><span>-</span></button>
+							<input type="text">
+							<button class="add"><span>+</span></button>
+							<button class="remove">Remove</button>
+							<p class="error">Quantity not valid!</p>
+						</div>
 
-					<div class="col quantity_column">
-						<button class="subtract"><span>-</span></button>
-						<input type="text">
-						<button class="add"><span>+</span></button>
-						<button class="remove">Remove</button>
-					</div>
-
-					<div class="col total_column"><p>$19.99</p></div>
-				</div>
-
-				<div class="cart-item">
-					<div class="col product_column">
-						<img src="images/workout-video.jpg" alt="" title="Do Squats Till Ya Plotz">
-						<p class="title">Do Squats Till Ya Plotz</p>
-					</div>
-
-					<div class="col price_column"><p>$19.99</p></div>
-
-					<div class="col quantity_column">
-						<button class="subtract"><span>-</span></button>
-						<input type="text">
-						<button class="add"><span>+</span></button>
-						<button class="remove">Remove</button>
-					</div>
-
-					<div class="col total_column"><p>$19.99</p></div>
+						<div class="col total_column"><p>$19.99</p></div>
+					</div> -->
 				</div>
 
 				<div class="cart-footer">
 					<div id="promo">
 						<label for="promo">Add Promo Code:</label>
 						<input type="text" name="promo">
-						<button id="promo">Add</button>
+						<button id="promoButton">Add</button>
 					</div>
 
 					<div id="total">
-						<p id="tothead">Total: $59.97</p>
+						<p id="tothead">Total: $0.00</p>
+						<p id="discount"> </p>
 					</div>
 
-					<div id="final_buttons">
+					<div class="cart_buttons">
 						<button>Keep Shopping</button>
-						<button>Check Out</button>
+						<button id="checkout">Check Out</button>
 					</div>
 				</div>
 			</div>
 		</main>
+
+		<script type="text/javascript" src="shopping-cart.js"></script>
 	</body>
 </html>

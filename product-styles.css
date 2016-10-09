@@ -133,7 +133,8 @@ li h2 {
 	letter-spacing: 1px;
 }
 
-.shopping-cart {
+#shopping-cart {
+	display: none;
 	-webkit-box-shadow: 10px 10px 45px 1px rgba(0, 0, 0, 0.75);
 	-moz-box-shadow: 10px 10px 45px 1px rgba(0, 0, 0, 0.75);
 	box-shadow: 10px 10px 45px 1px rgba(0, 0, 0, 0.75);
@@ -147,7 +148,7 @@ li h2 {
 	padding-bottom: 40px;
 }
 
-.shopping-cart h1 {
+#shopping-cart h1 {
 	display: block;
 	margin: 0 auto;
 }
@@ -175,6 +176,13 @@ li h2 {
 	font-family: "Atomic Age", "Arial", sans-serif;
 	font-weight: 600;
 	width: 70%;
+}
+
+.cart-item p.error { /*Appears in Firefox w/ invalid quantity*/
+	margin-top: 15px;
+	margin-left: 4px;
+	color: red;
+	display: none;
 }
 
 .cart-item img {
@@ -234,7 +242,7 @@ button span {
 	outline: none;
 }
 
-.remove, button#promo {
+.remove, button#promoButton {
 	display: block;
 	margin-left: 13%;
 	margin-top: 15px;
@@ -251,18 +259,15 @@ button span {
 	box-shadow: 10px 10px 41px -4px rgba(0, 0, 0, 0.75);
 }
 
-button#promo {
+button#promoButton {
 	display: inline-block;
 	margin-left: 3%;
 }
 
-.remove:active, button#promo:active {
+.remove:active, button#promoButton:active {
 	box-shadow: none;
 	position: relative;
 	bottom: -4px;
-}
-
-.cart-footer {
 }
 
 #promo {
@@ -292,18 +297,23 @@ button#promo {
 	margin-left: 21%;
 }
 
+#discount {
+	font-size: 13px;
+	color: red;
+}
+
 @media screen and (min--moz-device-pixel-ratio:0) {
 	#total {
 		margin-left: 14%;
 	}
 }
 
-#final_buttons {
+.cart_buttons {
 	text-align: center;
 	margin-top: 60px;
 }
 
-#final_buttons button {
+.cart_buttons button {
 	border: none;
 	height: 60px;
 	width: 230px;
@@ -318,18 +328,22 @@ button#promo {
 	box-shadow: 10px 10px 41px -4px rgba(0, 0, 0, 0.75);
 }
 
-#final_buttons button:active {
+.cart_buttons button:active {
 	box-shadow: none;
 	position: relative;
 	bottom: -4px;
 }
 
-#final_buttons button:hover {
+.cart_buttons button:hover {
 	background-color: #3366ff;
 }
 
-#final_buttons button:first-of-type {
+.cart_buttons button:first-of-type {
 	margin-right: 20px;
+}
+
+#toggle {
+	margin-bottom: 60px;
 }
 
 #back {
